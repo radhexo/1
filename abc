@@ -1,0 +1,85 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { MapPin, Phone, Mail, Youtube, Linkedin, MessageSquareMore } from "lucide-react";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-800 dark:text-gray-100 p-6 space-y-16">
+      {/* Hero Section */}
+      <section className="text-center space-y-4">
+        <h1 className="text-5xl font-extrabold tracking-tight">Essential Equipments</h1>
+        <p className="text-xl max-w-3xl mx-auto">
+          With over two decades of experience, we are one of the leading manufacturers of renewable energy systems and industrial fabrication solutions, delivering quality and innovation across India.
+        </p>
+        <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 text-lg rounded-xl shadow-lg">
+          Explore Products
+        </Button>
+      </section>
+
+      {/* Products & Services */}
+      <section className="space-y-8">
+        <h2 className="text-3xl font-bold text-center">Our Products & Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card className="bg-white/90 dark:bg-gray-800/80 shadow-md rounded-2xl">
+            <CardContent className="p-6">
+              <h3 className="font-bold text-xl mb-3">Renewable Energy Products</h3>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Parabolic Solar Cookers</li>
+                <li>Scheffler Systems</li>
+                <li>Biomass Wood Stoves</li>
+                <li>Biogas Plants</li>
+                <li>Solar Dryers</li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="bg-white/90 dark:bg-gray-800/80 shadow-md rounded-2xl">
+            <CardContent className="p-6">
+              <h3 className="font-bold text-xl mb-3">Engineering & Fabrication</h3>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Industrial Fabrication</li>
+                <li>Pre-Engineered Structures</li>
+                <li>Construction Centering Materials</li>
+                <li>Innovative Staircases</li>
+                <li>Special Purpose Machines (Roasters, Shredders)</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-center">Contact Us</h2>
+        <div className="max-w-xl mx-auto space-y-4 text-lg">
+          <p className="flex items-center gap-2"><MapPin className="w-5 h-5" /> G 63, MIDC Avdhan, Dhule, Awadhan, Maharashtra 424006</p>
+          <p className="flex items-center gap-2"><Phone className="w-5 h-5" /> +91 7720012528</p>
+          <p className="flex items-center gap-2"><Mail className="w-5 h-5" /> eedhule@gmail.com</p>
+          <p className="flex items-center gap-2"><Phone className="w-5 h-5" /> WhatsApp: +91 7720012528</p>
+          <p className="flex items-center gap-2"><Youtube className="w-5 h-5" /> <a href="https://www.youtube.com/@EssentialEquipments" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline">YouTube Channel</a></p>
+          <p className="flex items-center gap-2"><Linkedin className="w-5 h-5" /> <a href="https://www.linkedin.com/company/essential-equipments/about/" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline">LinkedIn Profile</a></p>
+          <p className="flex items-center gap-2">
+            <MapPin className="w-5 h-5" />
+            <a href="https://www.bing.com/maps?where=G%2063%2C%20MIDC%2C%20Dhule%2C%20Maharashtra%20424006%2C%20IN" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline">
+              View on Map
+            </a>
+          </p>
+          <div className="pt-6">
+            <a
+              href="https://wa.me/917720012528"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl text-base shadow-md"
+            >
+              <MessageSquareMore className="w-5 h-5" /> Chat with Us on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-sm text-gray-600 dark:text-gray-400 pt-10 border-t border-gray-300 dark:border-gray-700">
+        © 2025 Essential Equipments. All rights reserved.
+      </footer>
+    </div>
+  );
+}
